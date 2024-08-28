@@ -51,9 +51,7 @@ func TestAddGetDelete(t *testing.T) {
 	parcel.Number = int(id)
 
 	// Проверка полей по отдельности
-	require.Equal(t, parcel.Client, res.Client)
-	require.Equal(t, parcel.Status, res.Status)
-	require.Equal(t, parcel.Address, res.Address)
+	require.Equal(t, parcel, res)
 	// delete
 	// удалите добавленную посылку, убедитесь в отсутствии ошибки
 	// проверьте, что посылку больше нельзя получить из БД
